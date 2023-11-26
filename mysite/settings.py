@@ -29,7 +29,7 @@ DEBUG = True
 # Application definition
 
 ALLOWED_HOSTS = ['proyectofinalbd.azurewebsites.net', '127.0.0.1']
-CSRF_ALLOW_ALL = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 CSRF_TRUSTED_ORIGINS = ['https://proyectofinalbd.azurewebsites.net','https://127.0.0.1']
 
 
