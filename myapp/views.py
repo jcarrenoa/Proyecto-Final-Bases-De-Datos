@@ -6,6 +6,11 @@ from django.contrib.auth import logout
 from myapp.models import *
 from django.views.decorators.csrf import csrf_exempt
 
+
+@csrf_exempt
+def login(request):          
+    return render(request, 'lr/sesion.html')
+    
 # Create your views here.
 def index(request):
     # if request.method == 'POST':
@@ -74,7 +79,3 @@ def eventos(request, idTienda):
     eventos = EventoxTienda.objects.filter(idTienda=idTienda).all()
     return render(request, 'app/eventos.html', {'eventos': eventos, 'isnull': EventoxTienda.objects.filter(idTienda=idTienda).all().count() == 0, 
                                                 'idTienda': idTienda, 'tienda_n': tienda_n, 'tiendas': tiendas})
-
-@csrf_exempt
-def login(request):          
-    return render(request, 'lr/sesion.html')
