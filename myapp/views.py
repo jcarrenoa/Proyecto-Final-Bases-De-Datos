@@ -21,10 +21,6 @@ def index(request):
     tiendas = Tienda.objects.all()
     return render(request, 'app/index.html', {'tiendas': tiendas})
 
-@csrf_exempt
-def login(request):          
-    return render(request, 'lr/sesion.html')
-
 def register(request):
     if request.method == 'POST':
         form = RegistroForm(request.POST)
@@ -78,3 +74,7 @@ def eventos(request, idTienda):
     eventos = EventoxTienda.objects.filter(idTienda=idTienda).all()
     return render(request, 'app/eventos.html', {'eventos': eventos, 'isnull': EventoxTienda.objects.filter(idTienda=idTienda).all().count() == 0, 
                                                 'idTienda': idTienda, 'tienda_n': tienda_n, 'tiendas': tiendas})
+
+@csrf_exempt
+def login(request):          
+    return render(request, 'lr/sesion.html')
