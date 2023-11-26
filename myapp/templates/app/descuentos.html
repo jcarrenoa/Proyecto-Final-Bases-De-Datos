@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+	<div class = "LOGOE">
+		<div class="logo-tienda">
+			<img src="/media/{{ tienda_n.imagen }}" alt="Logo de la tienda" class="logo">
+			<p class="nombre-tienda"> {{ tienda_n.Nombre | upper}} </p>
+		</div>
+	</div>
+    <main class="productos">
+        <div class="container-items">
+			{% csrf_token %}
+			{% for descuento in descuentos %}
+				<div class="item">
+					<figure>
+						<img
+							src="{{ descuento.imagen.url }}"
+							alt="producto"
+						/>
+					</figure>
+					<div class="info-product">
+						<h2>Disfruta de un {{ descuento.PorcentajeDesc }}%</h2>
+						<h3 class="price">{{ descuento.FechaInicio }} - {{ descuento.FechaFinal }}</h3>
+					</div>
+				</div>
+			{% endfor %}
+			{% if isnull %}
+				<h1>No hay descuentos en esta tienda</h1>
+			{% endif %}
+		</div>
+    </main>
+
+	<h1>Discover...</h1>
+	<section class="seccion-enlaces">
+		
+        <div class="enlace">
+            <a href="{% url 'eventos' idTienda=idTienda %}">
+                <img src="/media/otros/event.png" alt="Eventos">
+                <p>Eventos</p>
+            </a>
+        </div>
+        <div class="enlace">
+            <a href="{% url 'tienda' idTienda=idTienda %}">
+                <img src="/media/otros/pro.png" alt="Productos">
+                <p>Productos</p>
+            </a>
+        </div>
+    </section>
+	
+{% endblock %}

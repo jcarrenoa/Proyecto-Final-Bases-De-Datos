@@ -1,0 +1,97 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+	<div class = "LOGOE">
+		<div class="logo-tienda">
+			<img src="images/e.jpg" alt="Logo de la tienda" class="logo">
+			<p class="nombre-tienda"> {{ tienda_n | upper}} </p>
+		</div>
+	</div>
+    <main class="productos">
+        <div class="container-items">
+			{% csrf_token %}
+			{% for proveedor in proveedores %}
+				<div class="item">
+					<figure>
+						<img
+							src="{{ proveedor.imagen }}"
+							alt="producto"
+						/>
+					</figure>
+					<div class="info-product">
+						<h2>{{ proveedor.Nombre }}</h2>
+						<p class="price">${{ producto.Telefono}}</p>
+					</div>
+				</div>
+			{% endfor %}
+			{% if isnull %}
+				<h1>No hay proveedores</h1>
+			{% endif %}
+		</div>
+
+    </main>
+
+
+	<h1>Discover...</h1>
+	<section class="seccion-enlaces">
+		
+        <div class="enlace">
+            <a href="#">
+                <img src="images/5223988.png" alt="Descuento">
+                <p>Descuentos</p>
+            </a>
+        </div>
+		<div class="enlace">
+            <a href="#">
+                <img src="images/pro.png" alt="Proovedores">
+                <p>Proovedores</p>
+            </a>
+        </div>
+        <div class="enlace">
+            <a href="#">
+                <img src="images/event.png" alt="Eventos">
+                <p>Eventos</p>
+            </a>
+        </div>
+    </section>
+
+	<section class="testimonials">
+		<h1>What Our Customer Says</h1>
+		<div class="testimonial-container">
+			<div class="testimonial">
+				<span class="icon"><i class="fas fa-quote-left"></i></span>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+				<div class="user">
+					<img src="images/1.jpg" alt="">
+					<div class="user-info">
+						<h4>John Doe</h4>
+						<small>CEO of Something</small>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial">
+				<span class="icon"><i class="fas fa-quote-left"></i></span>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+				<div class="user">
+					<img src="images/2.jpg" alt="">
+					<div class="user-info">
+						<h4>John Doe</h4>
+						<small>CEO of Something</small>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial">
+				<span class="icon"><i class="fas fa-quote-left"></i></span>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+				<div class="user">
+					<img src="images/3.jpg" alt="">
+					<div class="user-info">
+						<h4>John Doe</h4>
+						<small>CEO of Something</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

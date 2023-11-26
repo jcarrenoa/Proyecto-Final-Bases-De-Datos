@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+    <section class = "encabezado" style="background-image: url({% static '/images/fondofig.png' %}); background-position: center;">
+        <div class="contenedor2">
+            <div class="texto">
+                <p>LET’S <br> EXPLORE <br> UNIQUE<br> THINGS</p>
+            </div>
+            <div class="imagen">
+                <img src="{% static 'images/store.svg' %}">
+            </div>
+        </div>
+    </section>
+        
+    <main class="tiendas">
+          <!-- Título antes de los botones -->
+        <h2 class="titulo-botones">Shop by Top Stores</h2>
+        <!-- Contenedor de empresas -->
+        <div class="empresas">
+            <!-- Primeras 6 empresas -->
+            {% for tienda in tiendas %}
+                <img href = "{% url 'tienda' idTienda=tienda.idTienda %}" class="imagen_e" src="{{ tienda.imagen.url }}" alt="Logo Empresa {{ tienda.idTienda }}">
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

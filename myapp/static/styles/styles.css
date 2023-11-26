@@ -1,0 +1,572 @@
+:root {
+  /* Paletas de colores */
+  --blanco: rgb(255, 255, 255);
+  --negro: rgb(0, 0, 0);
+  --marronO: rgb(141, 123, 104);
+  --marronOS: rgb(164, 144, 124);
+  --marronS: rgb(200, 182, 166);
+  --beis: rgb(241, 222, 201);
+  --beis-bg: rgb(251, 246, 240);
+  --marron: rgb(92, 78, 64);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+*, *:before, *:after { /* Hack boxmodel */
+  box-sizing: inherit;
+}
+
+body{
+background: white;
+}
+
+header{
+width: 100%;
+height: 90px;
+position: inherit;
+background-color: white;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.w-sm-100 {
+  width: 100%;
+}
+
+header {
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .w-sm-100 {
+      width: auto;
+  }
+}
+
+
+.LOGOE .logo-tienda{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(97, 255, 110);
+}
+
+.productos {
+  width: 80%; /* Puedes ajustar el ancho según sea necesario */
+  max-width: 1200px; /* Establece un ancho máximo para evitar que se extienda demasiado */
+  margin: auto; /* Centra el main horizontalmente */
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.logo-tienda {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Mueve el logo y el nombre a la izquierda */
+}
+
+.logo {
+  max-width: 80px; /* Ajusta el ancho máximo del logo según sea necesario */
+  height: auto;
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.nombre-tienda {
+  font-size: 1.5rem; /* Ajusta el tamaño del nombre de la tienda según sea necesario */
+  font-weight: bold;
+  color: #333; /* Ajusta el color del texto según sea necesario */
+}
+
+.seccion-enlaces {
+  display: flex;
+  justify-content: space-around ;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  gap: -200px; /* Ajusta el espacio horizontal entre enlaces */
+}
+
+.enlace {
+  margin: 10px;
+  text-align: center;
+
+}
+
+.enlace:hover {
+  transform: scale(1.1); /* Escala el elemento al 110% en el hover */
+}
+
+
+.enlace img {
+    width: 128px;
+    height: 128px;
+  border-radius: 10px; /* Ajusta el radio del borde según sea necesario */
+  margin-bottom: 10px; /* Espaciado inferior entre la imagen y el texto */
+}
+
+.enlace p {
+  font-weight: bold;
+  color: #333; /* Ajusta el color del texto según sea necesario */
+  /* Body XL/Body XL, 500 */
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 150%; /* 30px */
+}
+
+
+.contenedor2 .imagen {
+  width: 48%;
+  text-align: left;
+}
+
+.texto {
+  width: 50%;
+  max-width: 696px;
+  height: 443px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 120px;
+  right: 100  ;
+}
+
+.interior {
+  max-width: 100%;
+  margin: auto;
+}
+
+.titulo {
+  float: center;
+  padding: 5px 11px 0;
+}
+
+.titulo:hover {
+  transform: scale(1.1);
+}
+
+.navegacion ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navegacion ul li {
+  display: inline-block;
+  position: relative;
+  transition: .3s linear;
+  z-index: 1000;
+}
+
+.navegacion .submenu .hijos {
+  display: none;
+  background: white;
+  position: absolute;
+  width: 100%;
+}
+
+.navegacion ul li:hover {
+  transform: scale(1.1);
+}
+
+.navegacion ul li a {
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1.2rem 2rem;
+  transition: 0.3 linear;
+}
+
+.navegacion ul li a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.navegacion ul li:hover .hijos {
+  display: block;
+}
+
+.navegacion ul li .hijos {
+  display: none;
+  position: absolute;
+  text-align: left;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.submenu {
+  background-color: white;
+  padding: 10px;
+}
+
+.titulo span {
+  font-size: 1.6rem;
+}
+
+.contenedor { /* Ajustar tamaño de la barra de navegacion */
+    max-width: 120rem;
+
+    /* Primera forma */
+    margin-top: 0rem;
+    margin-right: auto;
+    margin-bottom: 0rem;
+    margin-left: auto;
+
+    /* Segunda forma */
+    margin: 0rem auto 0rem auto;
+
+    /* Tercera forma */
+    margin: 0rem auto;
+}
+
+.tiendas {
+  float: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.contenedor2 {
+  display: flex;
+  max-width: 120rem;
+  margin: 0rem 10rem;
+  padding: 7rem 5rem;
+}
+
+
+.contenedor2 .imagen {
+  width: 48%;
+  text-align: right;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh; /* Usa min-height en lugar de height */
+  background: #FFFFFF;
+  margin: 0;
+  flex: 1;
+}
+
+.container-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.item{
+  border-radius: 10px;
+}
+
+.item:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all .5s;
+}
+
+.item figure{
+  overflow: hidden;
+}
+
+.item:hover img{
+  transform: scale(1.2);
+}
+
+.info-product{
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price{
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.info-product button{
+  border: none;
+  background: none;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.info-product h2 {
+  color: #000;
+
+  /* Body Small/Body Small, 400 */
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  
+}
+
+.navegacion-principal { /* Orientacion de la barra de navegacion por defecto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 9.8rem;
+    z-index: 1000;
+}
+
+.navegacion ul{
+	list-style: none;
+	padding: 0 10px;
+}
+
+.navegacion ul li{
+	display: inline-block;
+	position: relative;
+	transition: .3s linear;
+	z-index: 1000;
+}
+
+.testimonials{
+  display: flex;;
+padding: 70px 0px 129px 0px;
+flex-direction: column;
+align-items: center;
+gap: 62px;
+}
+
+.testimonials h1{
+  /* Heading 03/Heading 03 — 600 */
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 48px */
+}
+
+.empresas {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.empresas img {
+  display: inline;
+  width: 14%;
+  height: auto;
+  max-height: 16%;
+  padding: 14px;
+  margin: 0 10px;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.footer {
+  background-color: #FFE1EB;
+  padding: 30px;
+  color: #000;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+.testimonial .user img {
+  margin-bottom: 5px;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.user {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+
+.portfolio-filters{
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.portfolio-filters ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-align: center;
+}
+
+.portfolio-filters li {
+  margin-right: 10px; /* Espacio entre los elementos */
+  display: inline-block;
+}
+
+.portfolio-filters a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border: 2px solid #ccc; /* Borde del cuadro */
+  border-radius: 5px; /* Esquinas redondeadas */
+  color: #333; /* Color del texto por defecto */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.portfolio-filters a.active,
+.portfolio-filters a:hover {
+  background-color:#C1E5C0; /* Color de fondo cuando se selecciona o pasa el ratón por encima */
+  color: #000; /* Color del texto cuando se selecciona o pasa el ratón por encima */
+}
+
+/* Estilo específico para el elemento "All" */
+.portfolio-filters a#all {
+background-color: transparent; /* Fondo transparente para el elemento "All" */
+border: 2px solid transparent; /* Borde transparente para el elemento "All" */
+color: #333; /* Color de texto para el elemento "All" */
+}

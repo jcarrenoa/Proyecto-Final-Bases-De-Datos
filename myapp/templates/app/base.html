@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registro</title>
+    <link rel="preload" href="{% static '/styles/normalize.css' %}" as="style">
+    <link rel="stylesheet" href="{% static '/styles/normalize.css' %}">
+    <link rel="preload" href="{% static '/styles/styles.css' %}" as="style">
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class = "interior">
+            <h1 href = "{% url 'index' %}" class="titulo"> DuNord<span>Mall</span> </h1>
+            <nav class="navegacion contenedor">
+                <ul>
+                    <li><a href = "{% url 'index' %}"><span><img src="{% static '/images/Chevron Down.svg' %}"></span> Home</a></li>
+                    <li class ="submenu"><a href="#"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> Stores</a>
+                        <ul class="hijos">
+                            {% csrf_token %}
+                            {% for tienda in tiendas %}
+                                <li><a href = "{% url 'tienda' idTienda=tienda.idTienda %}" id="{{tienda.idTienda}}">{{ tienda.Nombre | upper}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li><a href="#"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> About us</a></li>
+                    {% if user.is_authenticated %}
+                        
+                        <li class ="submenu"><a href="#"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> {{ user.username | upper }}</a>
+                            <ul class="hijos">
+                                <li><a href="{% url 'exit' %}"><span></span> Logout</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> Login</a></li>
+                        <li><a href="{% url 'register' %}"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> Register</a></li>
+                    {% endif %}
+                    </ul>
+            </nav>
+        </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="footer__addr">
+          <p class="logo">duNord</p>
+              
+          <!--  <h2>Contact</h2> -->
+          
+          <address>
+            5534 Somewhere In. The World 22193-10212<br>
+                
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          </address>
+        </div>
+        <div class="legal">
+          <p>&copy; 2023 duNord. All rights reserved.</p>
+          
+          <div class="legal__links">
+            <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
