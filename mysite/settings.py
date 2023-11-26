@@ -30,9 +30,6 @@ SECRET_KEY = 'django-insecure-m1f35h)p2ee!@5pna@epwr*5ujy#=@@%*y%m$=2^t%ugovp7#-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -128,14 +125,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'myapp/static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = 'index'
 
-ALLOWED_HOSTS = ['proyectofinalbd.azurewebsites.net']
+ALLOWED_HOSTS = ['proyectofinalbd.azurewebsites.net', '127.0.0.1']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
