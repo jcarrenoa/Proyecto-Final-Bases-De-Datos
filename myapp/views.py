@@ -77,3 +77,4 @@ def eventos(request, idTienda):
     eventos = EventoxTienda.objects.filter(idTienda=idTienda).all()
     return render(request, 'app/eventos.html', {'eventos': eventos, 'isnull': EventoxTienda.objects.filter(idTienda=idTienda).all().count() == 0, 
                                                 'idTienda': idTienda, 'tienda_n': tienda_n, 'tiendas': tiendas, 'title': 'Eventos'})
+ 
