@@ -6,8 +6,6 @@ from django.contrib.auth import logout
 from myapp.models import *
 from django.views.decorators.csrf import csrf_exempt
 
-
-@csrf_exempt
 def login(request):          
     return render(request, 'lr/sesion.html')
     
