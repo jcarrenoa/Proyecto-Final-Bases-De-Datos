@@ -4,6 +4,7 @@ from .forms import RegistroForm
 from django.contrib import messages
 from django.contrib.auth import logout
 from myapp.models import *
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def index(request):
@@ -20,6 +21,7 @@ def index(request):
     tiendas = Tienda.objects.all()
     return render(request, 'app/index.html', {'tiendas': tiendas})
 
+@csrf_exempt
 def login(request):          
     return render(request, 'lr/sesion.html')
 
