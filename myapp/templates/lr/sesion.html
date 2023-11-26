@@ -2,8 +2,8 @@
 {% block content %}
     <div class="formulario sombra">
         <h1>Iniciar sesión</h1>
+        {% csrf_token %}
         <form method="POST" class="user">
-            {% csrf_token %}
             <div class="username">
                 <i class="fa-solid fa-user"></i>
                 {{ form.username }}

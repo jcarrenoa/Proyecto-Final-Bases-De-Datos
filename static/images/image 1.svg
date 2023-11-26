@@ -1,0 +1,9 @@
+<svg width="116" height="101" viewBox="0 0 116 101" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect id="image 1" y="0.5" width="116" height="100" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_11_424" transform="matrix(0.0569725 0 0 0.0808684 0.0502598 -0.138032)"/>
+</pattern>
+<image id="image0_11_424" data-name="letra-e (2).png" width="16" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACdSURBVDiNtdLBCcJQEATQl6igB49KQPAgeBMbsAXbswK1BSFt2ICFSKKXLwb9iSTBgYFl/+wy81k4o8CjJQsck1CkuqFMwrbOGNb0r7h/9EbYxsSxfFlEl8W0dQ5eOGAW6nGdqMnBrea9ysYFS6wC8y4RdpiGev6XCL8cXLw/cYJ9WwdVLNo4yMUP6Qu9TzlF2WO+HGCNTXDTahinJ96CWHMRcyalAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
