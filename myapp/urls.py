@@ -16,4 +16,4 @@ urlpatterns = [
     path('proveedores/<int:idTienda>', views.proveedores, name='proveedores'),
     path('descuentos/<int:idTienda>', views.descuentos, name='descuentos'),
     path('eventos/<int:idTienda>', views.eventos, name='eventos'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
