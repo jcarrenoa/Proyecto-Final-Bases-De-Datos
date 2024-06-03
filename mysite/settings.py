@@ -28,9 +28,9 @@ DEBUG = True
 
 # Application definition
 
-ALLOWED_HOSTS = ['proyectofinalbd.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['proyectofinalbd.azurewebsites.net', '127.0.0.1', 'b2c-store.azurewebsites.net']
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-CSRF_TRUSTED_ORIGINS = ['https://proyectofinalbd.azurewebsites.net','https://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://proyectofinalbd.azurewebsites.net','https://127.0.0.1', 'https://b2c-store.azurewebsites.net']
 
 
 INSTALLED_APPS = [

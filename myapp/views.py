@@ -11,16 +11,6 @@ def login(request):
     
 # Create your views here.
 def index(request):
-    # if request.method == 'POST':
-    #     
-    #     # Obtener la variable del cuerpo de la solicitud POST
-    #     idTienda = request.POST.get('mi_variable', None)
-    #     tienda_n = None
-    #     if idTienda != 0:
-    #         tienda_n = Tienda.objects.filter(idTienda=idTienda).all()
-    #     
-    #     # Devolver la variable como respuesta JSON
-    #     return redirect('tienda', idTienda = idTienda)
     tiendas = Tienda.objects.all()
     return render(request, 'app/index.html', {'tiendas': tiendas, 'title': 'Inicio'})
 

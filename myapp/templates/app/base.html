@@ -29,7 +29,6 @@
                     </li>
                     <li><a href="#"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> About us</a></li>
                     {% if user.is_authenticated %}
-                        
                         <li class ="submenu"><a href="#"><span><img src="{% static 'images/Chevron Down (1).svg' %}"></span> {{ user.username | upper }}</a>
                             <ul class="hijos">
                                 <li><a href="{% url 'exit' %}"><span></span> Logout</a></li>
